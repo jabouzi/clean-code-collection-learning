@@ -12,7 +12,8 @@ class EstimationTest {
 
     @Test
     fun `PERT expected value uses weighted average formula`() {
-        assertEquals(4.0, subject.pertExpected(optimistic = 1.0, nominal = 3.0, pessimistic = 12.0), absoluteTolerance = 0.01)
+        // (1 + 4*4 + 7) / 6 = 24/6 = 4.0 exactly
+        assertEquals(4.0, subject.pertExpected(optimistic = 1.0, nominal = 4.0, pessimistic = 7.0), absoluteTolerance = 0.01)
     }
 
     @Test
