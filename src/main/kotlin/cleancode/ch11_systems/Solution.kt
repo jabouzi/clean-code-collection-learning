@@ -1,5 +1,8 @@
 package cleancode.ch11_systems
 
+// NOTE: Application, OrderProcessor, ServiceFactory, MyService, Database are defined in Exercise.kt
+// (same package). Solution provides its own named versions below for the solution implementations.
+
 object Solution {
     // Principle: Separation of Concerns — concurrency lives in its own class
     fun isConcernSeparated(hasDedicatedThreadClass: Boolean, businessLogicHasThreadCode: Boolean): Boolean =

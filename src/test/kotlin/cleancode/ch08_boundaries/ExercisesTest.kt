@@ -15,7 +15,7 @@ class BoundariesTest {
 
     @Test
     fun `SensorMap add then getById returns correct sensor`() {
-        val map = subject.SensorMap()
+        val map = SensorMap()
         val sensor = Sensor("s1", 42.0)
         map.add("s1", sensor)
         assertEquals(sensor, map.getById("s1"))
@@ -23,7 +23,7 @@ class BoundariesTest {
 
     @Test
     fun `SensorMap getById for unknown id returns null`() {
-        val map = subject.SensorMap()
+        val map = SensorMap()
         assertNull(map.getById("unknown"))
     }
 

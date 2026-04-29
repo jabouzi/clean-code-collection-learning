@@ -1,5 +1,8 @@
 package cleancode.ch16_refactoring_serial_date
 
+// NOTE: MonthValue, SimpleDate, and Month (object) are defined at file scope in Exercise.kt.
+// Solution uses its own internal enum for month arithmetic.
+
 @Suppress("EnumEntryName")
 object Solution {
     // Named constants replace magic numbers — intent is immediately clear
@@ -27,12 +30,13 @@ object Solution {
         if (month == 2 && isLeapYear(year)) 29 else DAYS_IN_MONTHS[month]
 
     // Principle: Use Enums to Replace int Constants — type-safe, self-documenting month names
-    enum class Month(val value: Int) {
+    // (Named SolMonth to avoid conflict with the file-scope Month object from Exercise.kt)
+    private enum class SolMonth(val value: Int) {
         JANUARY(1), FEBRUARY(2), MARCH(3), APRIL(4), MAY(5), JUNE(6),
         JULY(7), AUGUST(8), SEPTEMBER(9), OCTOBER(10), NOVEMBER(11), DECEMBER(12);
 
         companion object {
-            fun fromInt(v: Int): Month =
+            fun fromInt(v: Int): SolMonth =
                 entries.firstOrNull { it.value == v }
                     ?: throw IllegalArgumentException("Invalid month value: $v")
         }

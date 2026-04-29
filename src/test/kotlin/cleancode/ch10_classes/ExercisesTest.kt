@@ -23,13 +23,13 @@ class ClassesTest {
 
     @Test
     fun `DashboardVersion getVersion returns major dot minor string`() {
-        val version = subject.DashboardVersion(major = 1, minor = 3)
+        val version = DashboardVersion(major = 1, minor = 3)
         assertEquals("1.3", version.getVersion())
     }
 
     @Test
     fun `DashboardFocus setLastFocused then getLastFocused returns same value`() {
-        val focus = subject.DashboardFocus()
+        val focus = DashboardFocus()
         focus.setLastFocused("button1")
         assertEquals("button1", focus.getLastFocused())
     }

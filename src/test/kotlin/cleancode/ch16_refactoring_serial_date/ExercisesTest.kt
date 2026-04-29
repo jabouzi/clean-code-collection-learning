@@ -29,15 +29,15 @@ class RefactoringSerialDateTest {
 
     @Test
     fun `Month fromInt returns correct enum value`() {
-        // Enum is nested in Exercise — access via Exercise.Month directly
-        assertEquals(1, Exercise.Month.fromInt(1).value)
-        assertEquals(12, Exercise.Month.fromInt(12).value)
-        assertEquals(4, Exercise.Month.fromInt(4).value)
+        // Month is now at file scope — access directly
+        assertEquals(1, Month.fromInt(1).value)
+        assertEquals(12, Month.fromInt(12).value)
+        assertEquals(4, Month.fromInt(4).value)
     }
 
     @Test
     fun `Month fromInt returns january for value 1`() {
-        assertEquals("JANUARY", Exercise.Month.fromInt(1).name)
+        assertEquals("JANUARY", Month.fromInt(1).name)
     }
 
     @Test

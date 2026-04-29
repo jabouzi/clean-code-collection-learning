@@ -12,7 +12,7 @@ val subject = Exercise   // ← your work (default)
 
 class SystemsTest {
 
-    // Note: Application and OrderProcessor are tested by constructing them directly via Exercise.*
+    // Note: Application and OrderProcessor are at file scope — construct them directly.
     // Only isConcernSeparated is dispatched through `subject` (pure function, no class instantiation needed)
 
     @Test
@@ -22,8 +22,7 @@ class SystemsTest {
                 override fun execute(): String = "ok"
             }
         }
-        // Construct Application via Exercise (nested class constructor)
-        val app = Exercise.Application(factory)
+        val app = Application(factory)
         assertEquals("ok", app.run())
     }
 
@@ -32,7 +31,7 @@ class SystemsTest {
         val db = object : Database {
             override fun find(id: Int): Any? = if (id == 1) "order" else null
         }
-        val processor = Exercise.OrderProcessor(db)
+        val processor = OrderProcessor(db)
         assertTrue(processor.process(1))
     }
 
@@ -41,7 +40,7 @@ class SystemsTest {
         val db = object : Database {
             override fun find(id: Int): Any? = null
         }
-        val processor = Exercise.OrderProcessor(db)
+        val processor = OrderProcessor(db)
         assertFalse(processor.process(99))
     }
 

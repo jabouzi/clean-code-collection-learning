@@ -12,12 +12,12 @@ val subject = Exercise   // ← your work (default)
 
 class EmergenceTest {
 
-    // Note: HtmlRenderer and StringUtils are nested classes — construct via Exercise.* directly
-    // primaryTermination is a top-level function dispatched through `subject`
+    // Note: HtmlRenderer and StringUtils are at file scope — construct them directly.
+    // primaryTermination is dispatched through `subject` (supports solution swap).
 
     @Test
     fun `HtmlRenderer renders full html structure`() {
-        val renderer = Exercise.HtmlRenderer()
+        val renderer = HtmlRenderer()
         assertEquals("<html><body>hello</body></html>", renderer.render("hello"))
     }
 
@@ -33,16 +33,16 @@ class EmergenceTest {
 
     @Test
     fun `StringUtils reverse returns reversed string`() {
-        assertEquals("cba", Exercise.StringUtils().reverse("abc"))
+        assertEquals("cba", StringUtils().reverse("abc"))
     }
 
     @Test
     fun `StringUtils isPalindrome returns true for palindrome`() {
-        assertTrue(Exercise.StringUtils().isPalindrome("racecar"))
+        assertTrue(StringUtils().isPalindrome("racecar"))
     }
 
     @Test
     fun `StringUtils isPalindrome returns false for non-palindrome`() {
-        assertFalse(Exercise.StringUtils().isPalindrome("hello"))
+        assertFalse(StringUtils().isPalindrome("hello"))
     }
 }
