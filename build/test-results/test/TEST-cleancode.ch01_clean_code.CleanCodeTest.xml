@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cleancode.ch01_clean_code.CleanCodeTest" tests="4" skipped="0" failures="4" errors="0" timestamp="2026-04-30T00:56:39.093Z" hostname="DKWRL7FHN4" time="0.023">
+  <properties/>
+  <testcase name="wtfRate returns the ratio of bad lines to total lines()" classname="cleancode.ch01_clean_code.CleanCodeTest" time="0.012">
+    <failure message="kotlin.NotImplementedError: An operation is not implemented: Return the ratio badLines / totalLines — the lower, the cleaner the code" type="kotlin.NotImplementedError">kotlin.NotImplementedError: An operation is not implemented: Return the ratio badLines / totalLines — the lower, the cleaner the code
+	at cleancode.ch01_clean_code.Exercise.wtfRate(Exercise.kt:20)
+	at cleancode.ch01_clean_code.CleanCodeTest.wtfRate returns the ratio of bad lines to total lines(ExercisesTest.kt:33)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <testcase name="isBoyScoutCompliant returns true when after is shorter than before()" classname="cleancode.ch01_clean_code.CleanCodeTest" time="0.001">
+    <failure message="kotlin.NotImplementedError: An operation is not implemented: Apply 'Boy Scout Rule' — is 'after' cleaner (shorter) than 'before'?" type="kotlin.NotImplementedError">kotlin.NotImplementedError: An operation is not implemented: Apply 'Boy Scout Rule' — is 'after' cleaner (shorter) than 'before'?
+	at cleancode.ch01_clean_code.Exercise.isBoyScoutCompliant(Exercise.kt:14)
+	at cleancode.ch01_clean_code.CleanCodeTest.isBoyScoutCompliant returns true when after is shorter than before(ExercisesTest.kt:23)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <testcase name="responsibilities splits a camelCase function name on And()" classname="cleancode.ch01_clean_code.CleanCodeTest" time="0.001">
+    <failure message="kotlin.NotImplementedError: An operation is not implemented: Apply 'Single Responsibility Principle' — count how many things this function name implies" type="kotlin.NotImplementedError">kotlin.NotImplementedError: An operation is not implemented: Apply 'Single Responsibility Principle' — count how many things this function name implies
+	at cleancode.ch01_clean_code.Exercise.responsibilities(Exercise.kt:7)
+	at cleancode.ch01_clean_code.CleanCodeTest.responsibilities splits a camelCase function name on And(ExercisesTest.kt:18)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <testcase name="isBoyScoutCompliant returns false when after is longer than before()" classname="cleancode.ch01_clean_code.CleanCodeTest" time="0.001">
+    <failure message="kotlin.NotImplementedError: An operation is not implemented: Apply 'Boy Scout Rule' — is 'after' cleaner (shorter) than 'before'?" type="kotlin.NotImplementedError">kotlin.NotImplementedError: An operation is not implemented: Apply 'Boy Scout Rule' — is 'after' cleaner (shorter) than 'before'?
+	at cleancode.ch01_clean_code.Exercise.isBoyScoutCompliant(Exercise.kt:14)
+	at cleancode.ch01_clean_code.CleanCodeTest.isBoyScoutCompliant returns false when after is longer than before(ExercisesTest.kt:28)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
