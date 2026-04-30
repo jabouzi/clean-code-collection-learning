@@ -20,3 +20,12 @@ tasks.test {
 kotlin {
     jvmToolchain(17)
 }
+
+sourceSets {
+    main {
+        kotlin.srcDirs("src/main/kotlin")
+    }
+    test {
+        kotlin.srcDirs("src/test/kotlin")
+    }
+}
